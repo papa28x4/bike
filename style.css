@@ -1,0 +1,145 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.grass, .sky, .road{
+    position: relative;
+}
+
+.sky{
+    height: 40%;
+    background: skyblue;
+}
+
+.cloud:nth-child(1) {
+    position: absolute;
+    opacity: 0.5;
+    top: 80px;
+    animation: cloud 18s linear 0s infinite; 
+}
+
+.cloud:nth-child(2) {
+    position: absolute;
+    top: 0;
+    animation: cloud 15s linear 0s infinite reverse; 
+}
+
+.grass{
+    height: 30%;
+    background: seagreen;
+    /* background: url('img/grass.JPG') no-repeat; */
+    
+}
+
+.road{
+    height: 30%;
+    background: dimgrey;
+    box-sizing: border-box;
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+
+}
+
+#line{
+    box-sizing: border-box;
+    /* border: 5px dotted black;  */
+    height: 47%;
+    width: 15px;
+    position: absolute;
+    left: 400px;
+    transform: rotateZ(-170deg);
+    background-image: url('img/bump4.JPG');
+    
+}
+
+.lines {
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 47%;
+}
+
+#mario{
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    animation: ride 5s ease-in-out 0.1s normal forwards, rideAgain 2s ease-in 7.1s normal forwards;
+    z-index: 5;
+}
+
+#luigi{
+    position: absolute;
+    left: 1500px;
+    top: 100px;
+    transform: rotateY(180deg);
+    animation: ride2 5s ease-in-out 5s normal forwards;
+}
+
+.traffic{
+    position: absolute;
+    left: 670px;
+    top: -68px;
+    opacity: 1;
+}
+
+.green {
+    opacity: 0;
+    animation: go 1s ease-in-out 6s normal forwards;
+}
+
+@keyframes go{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1
+    }
+}
+
+@keyframes ride {
+    0%{
+        left: -10px;
+        top: 10px;
+    }
+    52%,65%{ top: 10px;}
+    60%{
+        top: -20px;
+    }
+    
+    100%{
+        left: 600px;
+    }
+}
+
+@keyframes rideAgain{
+    0%{
+        left:600px;
+    }
+    100%{
+        left: 1400px;
+    }
+}
+
+@keyframes ride2{
+    0%{
+        left:1500px;
+    }
+    100%{
+        left: -100px;
+    }
+}
+
+@keyframes cloud{
+    from{
+        left: -300px;
+    }
+    to{
+        left: 1000px;
+    }
+}
