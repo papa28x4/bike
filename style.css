@@ -1,6 +1,6 @@
 html, body{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
     margin: 0;
 }
@@ -10,7 +10,7 @@ html, body{
 }
 
 .sky{
-    height: 40%;
+    height: 40vh;
     background: skyblue;
 }
 
@@ -28,14 +28,14 @@ html, body{
 }
 
 .grass{
-    height: 30%;
+    height: 30vh;
     background: seagreen;
     /* background: url('img/grass.JPG') no-repeat; */
     
 }
 
 .road{
-    height: 30%;
+    height: 30vh;
     background: dimgrey;
     box-sizing: border-box;
     border-top: 10px solid grey;
@@ -49,7 +49,7 @@ html, body{
     height: 47%;
     width: 15px;
     position: absolute;
-    left: 400px;
+    left: 28.5vw;
     transform: rotateZ(-170deg);
     background-image: url('img/bump4.JPG');
     
@@ -58,24 +58,24 @@ html, body{
 .lines {
     box-sizing: border-box;
     border: 5px dashed #fff;
-    height: 0px;
-    width: 100%;
+    height: 0;
+    width: 100vw;
     position: absolute;
     top: 47%;
 }
 
 #mario{
     position: absolute;
-    left: -10px;
-    top: 10px;
+    left: -1vw;
+    top: 1vw;
     animation: ride 5s ease-in-out 0.1s normal forwards, rideAgain 2s ease-in 15.2s normal forwards;
     z-index: 5;
 }
 
 #luigi{
     position: absolute;
-    left: 1500px;
-    top: 100px;
+    left: 107vw;
+    top: 7vw;
     transform: rotateY(180deg);
     animation: ride2 3s ease-in-out 0.1s normal forwards, ride3 5s ease-in-out 3.2s normal forwards,
     rideAgain2 2s ease-in 15.6s normal forwards;
@@ -84,8 +84,8 @@ html, body{
 
 .traffic{
     position: absolute;
-    left: 670px;
-    top: -68px;
+    left: 47vw;
+    top: -5vw;
     opacity: 1;
 }
 
@@ -106,74 +106,74 @@ html, body{
 
 @keyframes ride {
     0%{
-        left: -10px;
-        top: 10px;
+        left: -1vw;
+        top: 1vw;
     }
-    52%,65%{ top: 10px;}
+    52%,65%{ top: 1vw;}
     60%{
-        top: -20px;
+        top: -1.5vw;
     }
     
     100%{
-        left: 600px;
+        left: 43vw;
     }
 }
 
 @keyframes ride2{
     0%{
-        left:1500px;
+        left:107vw;
     }
     100%{
-        left: -100px;
+        left: -7vw;
     }
 }
 
 
 @keyframes ride3 {
     0%{
-        left: -100px;
-        top: 10px;
+        left: -7vw;
+        top: 1vw;
         transform: rotateY(180deg);
     }
     1%{
         transform: rotateY(0deg);
     }
-    60%,70%{ top: 10px;}
+    60%,70%{ top: 1vw;}
     65%{
-        top: -20px;
+        top: -2vw;
     }
     
     100%{
-        left: 540px;
+        left: 38.5vw;
         transform: rotateY(0deg);
-        top: 10px;
+        top: 1vw;
     }
 }
 
 @keyframes rideAgain{
     0%{
-        left:600px;
+        left:43vw;
     }
     100%{
-        left: 1400px;
+        left: 101vw;
     }
 }
 
 @keyframes rideAgain2{
     0%{
-        left:540px;
+        left:38.5vw;
     }
     100%{
-        left: 1400px;
+        left: 101vw;
     }
 }
 
 
 @keyframes cloud{
     from{
-        left: -300px;
+        left: -21vw;
     }
     to{
-        left: 1400px;
+        left: 101vw;
     }
 }
