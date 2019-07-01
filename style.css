@@ -57,7 +57,7 @@ html, body{
 
 .lines {
     box-sizing: border-box;
-    border: 0.5vw dashed #fff;
+    border: 0.8vw dashed #fff;
     height: 0;
     width: 100vw;
     position: absolute;
