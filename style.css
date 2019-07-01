@@ -47,7 +47,7 @@ html, body{
     box-sizing: border-box;
     /* border: 5px dotted black;  */
     height: 47%;
-    width: 15px;
+    width: 1vw;
     position: absolute;
     left: 28.5vw;
     transform: rotateZ(-170deg);
