@@ -22,5 +22,40 @@
         <div id="line"></div>
     </div>
     
+
+    <script>
+        let horn = document.createElement("audio");
+        let drive = document.createElement("audio");
+        let passing = document.createElement("audio");
+
+        setTimeout(playPassing, 10);
+        setTimeout(stopPlaying, 7900)
+        setTimeout(playHorn, 8800);
+        setTimeout(playDrive, 9000);
+        
+        
+
+        function playHorn(){
+            horn.src = "tspt_scooter_honking_01_074.mp3";
+            horn.play();
+            
+        }
+
+        function playDrive(){
+            drive.src = "tspt_motorbike_start_drive_off_055.mp3";
+            drive.play();
+        }
+
+        function playPassing(){
+            passing.src = "tspt_scooter_passing_03_075.mp3";
+            passing.play();
+        }
+
+        function stopPlaying(){
+            passing.src = null;
+            
+        }
+        
+    </script>
 </body>
 </html>
