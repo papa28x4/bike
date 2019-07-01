@@ -49,7 +49,7 @@ html, body{
     width: 1vw;
     position: absolute;
     left: 28.5vw;
-    transform: rotateZ(-170deg);
+    transform: rotateZ(-180deg);
     background-image: url('img/bump4.JPG');
     
 }
