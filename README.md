@@ -1,4 +1,4 @@
 # bike
-Animate bikes uisng css3
+Animate bikes using css3
 
 Inspirated by The Net ninja
