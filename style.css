@@ -3,7 +3,42 @@ html, body{
     width: 100vw;
     overflow: hidden;
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
+
+#farewell{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 15%;
+    z-index: 4;
+}
+#start{
+    width: 30%;
+    padding: 15px;
+    position: absolute;
+    left: 35%;
+    top: 15%;
+    z-index: 5;
+    font-size: 5vmin;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(226,226,226,0.7);
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+    transition: opacity 1s linear;
+}
+
+#start:focus{
+    outline: none;
+}
+#start.hide{
+    opacity: 0;
+}
+
+#start:hover{
+background-color : rgba(226,226,226,1);
+}  
 
 .grass, .sky, .road{
     position: relative;
@@ -18,20 +53,18 @@ html, body{
     position: absolute;
     opacity: 0.5;
     top: 80px;
-    animation: cloud 18s linear 0s infinite; 
+    animation: cloud 18s linear 0s infinite paused; 
 }
 
 .cloud:nth-child(2) {
     position: absolute;
     top: 0;
-    animation: cloud 15s linear 0s infinite reverse; 
+    animation: cloud 15s linear 0s infinite reverse paused; 
 }
 
 .grass{
     height: 30vh;
     background: seagreen;
-    /* background: url('img/grass.JPG') no-repeat; */
-    
 }
 
 .road{
@@ -40,7 +73,6 @@ html, body{
     box-sizing: border-box;
     border-top: 10px solid grey;
     border-bottom: 10px solid grey;
-
 }
 
 #line{
@@ -68,6 +100,7 @@ html, body{
     left: -1vw;
     top: 1vw;
     animation: ride 5s ease-in-out 0.1s normal forwards, rideAgain 2s ease-in 15.2s normal forwards;
+    animation-play-state: paused;
     z-index: 5;
 }
 
@@ -78,6 +111,7 @@ html, body{
     transform: rotateY(180deg);
     animation: ride2 3s ease-in-out 0.1s normal forwards, ride3 5s ease-in-out 3.2s normal forwards,
     rideAgain2 2s ease-in 15.6s normal forwards;
+    animation-play-state: paused;
     z-index: 5;
 }
 
@@ -90,7 +124,7 @@ html, body{
 
 .green {
     opacity: 0;
-    animation: go 1s ease-in-out 8s normal forwards;
+    animation: go 1s ease-in-out 8s normal forwards paused;
 }
 
 @keyframes go{

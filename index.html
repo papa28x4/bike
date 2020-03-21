@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" />
     <title>Document</title>
 </head>
-<body>
+<body id="body">
+
+    <button type="button" id="start">Start Animation</button>
+    <div id="farewell"></div>
     <div class="sky">
         <img class="cloud" src="img/cloud.png" height="50%"alt="">
         <img class= "cloud" src="img/cloud.png" alt="">
@@ -24,21 +28,30 @@
     
 
     <script>
-        let horn = document.createElement("audio");
-        let drive = document.createElement("audio");
-        let passing = document.createElement("audio");
-
-        setTimeout(playPassing, 10);
-        setTimeout(stopPlaying, 7900)
-        setTimeout(playHorn, 8800);
-        setTimeout(playDrive, 9000);
+        let horn, drive, passing;
+        const start = document.querySelector('#start')
+        const images = document.querySelectorAll('img')
+        const farewell = document.querySelector('#farewell')
         
-        
+        start.addEventListener('click', init);
 
+
+        function init(){
+            start.classList.add('hide');
+            horn = document.createElement("audio");
+            drive = document.createElement("audio");
+            passing = document.createElement("audio");
+            images.forEach(image => image.style.animationPlayState="running")
+            setTimeout(playPassing, 10);
+            setTimeout(stopPlaying, 7900)
+            setTimeout(playHorn, 8800);
+            setTimeout(playDrive, 9000);
+            setTimeout(displayMsg, 17000);
+        }
+        
         function playHorn(){
             horn.src = "tspt_scooter_honking_01_074.mp3";
-            horn.play();
-            
+            horn.play();   
         }
 
         function playDrive(){
@@ -52,8 +65,11 @@
         }
 
         function stopPlaying(){
-            passing.src = null;
-            
+             passing.pause();
+        }
+
+        function displayMsg(){
+            farewell.innerHTML = `<span style="font-size:3rem;">E Go Be &#x270c;</span>`
         }
         
     </script>
